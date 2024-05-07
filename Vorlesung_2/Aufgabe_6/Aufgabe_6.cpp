@@ -53,6 +53,13 @@ double **multiply2dMatrix(double **m1, double **m2, std::pair<int, int> dims1, s
 	return resulting;
 }
 
+void delete2dArray(double **matrix, int rows) {
+	for (int i = 0; i < rows; ++i) {
+		delete[] matrix[i];
+	}
+	delete[] matrix;
+}
+
 int main() {
 	const int rowsM1 = 3, columnsM1 = 4, columnsM2 = 2;
 	double **m1, **m2, **m3;
@@ -71,5 +78,8 @@ int main() {
 		return 1;
 	std::cout << "Ergebnis: ";
 	printMatrix(m3, rowsM1, columnsM2);
+	delete2dArray(m1, rowsM1);
+	delete2dArray(m2, columnsM1);
+	delete2dArray(m3, rowsM1);
 	return 0;
 }
