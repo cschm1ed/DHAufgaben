@@ -7,7 +7,7 @@ CC		:= g++
 
 OBJS	:=
 
-CFLAGS	:= -Wall -Werror -Wextra -std=c++17
+CFLAGS	:= -Wall -Werror -Wextra
 
 $(NAME): $(SRCS)
 	$(CC) $(CFLAGS) $^ -o $@

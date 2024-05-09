@@ -27,7 +27,7 @@ void printArray(double *array, int size) {
 
 int main() {
 	int size;
-	double *array = nullptrptr;
+	double *array = nullptr;
 
 	std::cout << "Bitte länge der Zahlenliste eingeben: ";
 	std::cin >> size;
@@ -35,7 +35,7 @@ int main() {
 		return std::cout << "ERROR: mindestens 1 oder maximal 100 Zahlen möglich\n", 1;
 	}
 	array = new double[size];
-	if (array == nullptrptr)
+	if (array == nullptr)
 		return perror("new: "), 1;
 	std::cout << "Bitte " << size << " Zahlen eingeben\n";
 	for (int i = 0; i < size; ++i) {
